@@ -1,0 +1,27 @@
+{
+  "name": "nodebasic",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server",
+    "server": "nodemon server",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "author": "Elijah Helmandollar",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "body-parser": "^1.19.0",
+    "config": "^3.1.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.6.3",
+    "multer": "^1.4.1",
+    "request": "^2.88.0"
+  },
+  "devDependencies": {
+    "concurrently": "^4.1.1",
+    "nodemon": "^1.19.1"
+  }
+}
