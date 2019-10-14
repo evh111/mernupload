@@ -55,4 +55,17 @@ ImageRouter.route('/uploadmulter').post(
   }
 );
 
+ImageRouter.route('/image/:image_id').get((req, res) => {
+  try {
+    const image = Image.findOne({
+      image_id: req.params.id
+    });
+
+    res.render(image);
+  } catch (err) {
+    console.log(err.message);
+    res.status(500).send('Server Error');
+  }
+});
+
 module.exports = ImageRouter;
